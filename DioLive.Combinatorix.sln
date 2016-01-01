@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DioLive.Combinatorix.Demo", "demo\DioLive.Combinatorix.Demo.csproj", "{62A49B3D-29ED-43FA-8CC0-383F1036A6CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DioLive.Combinatorix.Core", "core\DioLive.Combinatorix.Core.csproj", "{2E85FF8D-64A2-4B44-8AA7-86168B3B328F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F592D1A-5139-43A4-BFDF-0F9EE152532E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62A49B3D-29ED-43FA-8CC0-383F1036A6CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62A49B3D-29ED-43FA-8CC0-383F1036A6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62A49B3D-29ED-43FA-8CC0-383F1036A6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62A49B3D-29ED-43FA-8CC0-383F1036A6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E85FF8D-64A2-4B44-8AA7-86168B3B328F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E85FF8D-64A2-4B44-8AA7-86168B3B328F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E85FF8D-64A2-4B44-8AA7-86168B3B328F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E85FF8D-64A2-4B44-8AA7-86168B3B328F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
