@@ -7,27 +7,27 @@
 
     public abstract class CombinatorixBase<T> : IEnumerable<T[]>
     {
-        private readonly int count;
-        private readonly T[] innerArray;
+        private readonly T[] items;
+        private readonly int size;
 
-        protected CombinatorixBase(ICollection<T> items, int count)
+        protected CombinatorixBase(ICollection<T> items, int size)
         {
-            innerArray = new T[items.Count];
-            items.CopyTo(innerArray, 0);
+            this.items = new T[items.Count];
+            items.CopyTo(this.items, 0);
 
-            this.count = count;
+            this.size = size;
         }
 
-        protected virtual int[] Initialize(int count, int maxIndex)
+        protected virtual int[] Initialize(int size, int maxIndex)
         {
-            return Enumerable.Range(0, count).ToArray();
+            return Enumerable.Range(0, size).ToArray();
         }
 
         protected abstract bool NextIndices(int[] currentIndices, int maxIndex);
 
-        private int[] Initialize() => Initialize(count, innerArray.Length - 1);
+        private int[] Initialize() => Initialize(size, items.Length - 1);
 
-        private bool NextIndices(int[] currentIndices) => NextIndices(currentIndices, innerArray.Length - 1);
+        private bool NextIndices(int[] currentIndices) => NextIndices(currentIndices, items.Length - 1);
 
         #region IEnumerable`1 implementation
 
@@ -96,7 +96,7 @@
 
             private void LoadCurrentItems()
             {
-                currentItems = currentIndices.Select(i => combinatorixBase.innerArray[i]).ToArray();
+                currentItems = currentIndices.Select(i => combinatorixBase.items[i]).ToArray();
                 invalidate = false;
             }
         }

@@ -8,25 +8,23 @@ namespace DioLive.Combinatorix.Core.Generic
     /// </summary>
     public class Variations<T> : CombinatorixBase<T>
     {
-        private int count;
         private bool isPermutateNow;
 
         private IEnumerator<int[]> permutationsEnumerator;
         private IEnumerator<int[]> combinationsEnumerator;
 
-        public Variations(ICollection<T> items, int count)
-            : base(items, count)
+        public Variations(ICollection<T> items, int size)
+            : base(items, size)
         {
-            this.count = count;
         }
 
-        protected override int[] Initialize(int count, int maxIndex)
+        protected override int[] Initialize(int size, int maxIndex)
         {
             int[] indices = Enumerable.Range(0, maxIndex + 1).ToArray();
-            var combinations = Combinatorix.Combinations(indices, count);
+            var combinations = Combinatorix.Combinations(indices, size);
             combinationsEnumerator = combinations.GetEnumerator();
 
-            return base.Initialize(count, maxIndex);
+            return base.Initialize(size, maxIndex);
         }
 
         protected override bool NextIndices(int[] currentIndices, int maxIndex)

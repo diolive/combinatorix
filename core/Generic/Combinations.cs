@@ -7,8 +7,8 @@ namespace DioLive.Combinatorix.Core.Generic
     /// </summary>
     public class Combinations<T> : CombinatorixBase<T>
     {
-        public Combinations(ICollection<T> items, int count)
-            : base(items, count)
+        public Combinations(ICollection<T> items, int size)
+            : base(items, size)
         {
         }
 
