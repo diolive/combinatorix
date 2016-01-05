@@ -17,7 +17,10 @@
 
         public static void Main()
         {
+#if DEBUG
             Console.Read();
+#endif
+
             string sourceString = "0123456789012";
             var sourceArray = sourceString.ToCharArray(); //Enumerable.Range(0, 20).ToArray();
             var count = 4;
@@ -93,8 +96,5 @@
 
             return new Results { Counter = nCounter, Time = stopwatch.Elapsed };
         }
-
-        //            Console.WriteLine("Combinations : {0}", nCounter);
-        // Console.WriteLine("Time to execute : {0}", stopwatch.Elapsed);
     }
 }
